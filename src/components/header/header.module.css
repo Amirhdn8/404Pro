@@ -1,0 +1,10 @@
+.btn{
+    font-size: 13px;
+    background-color:#6666FF;
+    border: none;
+    transition: 0.5s;
+}
+.btn:hover{
+    background: #7878f3 ;
+    transition: 0.5s;
+}
