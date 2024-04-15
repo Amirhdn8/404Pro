@@ -6,8 +6,10 @@ import HeroSection from "./components/heroSection/HeroSection";
 function App() {
   return (
     <>
-      <Header />
-      <HeroSection />
+      <div className="container-fluid">
+        <Header />
+        <HeroSection />
+      </div>
     </>
   );
 }

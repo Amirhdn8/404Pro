@@ -1,26 +1,34 @@
 import React from "react";
 import Style from "./heroSection.module.css";
 import img from "../../assets/developer.png";
-import svg from "../../assets/Vector.svg";
+import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row d-flex justify-content-center align-items-center">
-        <div className={`col-md-6 col-sm-6 col-12 text-end ${Style.back}`}>
+        <div className={`col-md-6 col-sm-6 col-12 text-end `}>
           <h2 className="mb-4">آکادمی بحر</h2>
-
-          <span>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ <br /> و
-            با استفاده از طراحان گرافیک است. چاپگرها و <br />
-            متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <br />و
-            برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف <br />
-            بهبود ابزارهای کاربردی می باشد
-          </span>
-
+          <div className="col-md-8">
+            <TypeAnimation
+              sequence={[
+                "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته،",
+                1000, // Waits 1s
+              ]}
+              wrapper="span"
+              cursor={true}
+              repeat={Infinity}
+              style={{ fontSize: "16px", display: "inline-block" }}
+            />
+          </div>
         </div>
-        <div className="col-md-5 col-sm-6 col-12 img-fluid">
-          <img src={img} alt="" className="img-fluid" />
+        <div className="col-md-5 col-sm-6">
+          <img
+            src={img}
+            alt=""
+            className="img-fluid"
+            style={{ height: "400px" }}
+          />
         </div>
       </div>
     </div>

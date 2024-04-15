@@ -1,1 +1,10 @@
-*{direction: rtl;}
+@font-face {
+  font-family: "iran-sans";
+  src: url("./assets/IRANSans.ttf");
+}
+* {
+  direction: rtl;
+}
+body {
+  font-family: "iran-sans" !important;
+}

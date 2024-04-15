@@ -7,7 +7,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <a className="navbar-brand me-5" href="#">
-            آکادمی بحر
+            BAHR ACADEMY
           </a>
           <button
             className="navbar-toggler"
