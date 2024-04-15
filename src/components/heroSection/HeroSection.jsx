@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid my-5">
       <div className="row d-flex justify-content-center align-items-center">
         <div className={`col-md-6 col-sm-6 col-12 text-end `}>
           <h2 className="mb-4">آکادمی بحر</h2>
