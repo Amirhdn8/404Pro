@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = ({ title, image, desc }) => {
+const ServicesCard = ({ title, image, desc }) => {
   return (
     <>
       <div className="text-center mt-5">
@@ -13,4 +13,4 @@ const Card = ({ title, image, desc }) => {
   );
 };
 
-export default Card;
+export default ServicesCard;

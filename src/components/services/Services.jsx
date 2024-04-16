@@ -1,9 +1,9 @@
 import React from "react";
-import Card from "./Card";
 import business2 from "../../assets/business2.png";
 import business3 from "../../assets/business3.png";
 import business4 from "../../assets/business4.png";
 import business5 from "../../assets/business5.png";
+import ServicesCard from "./ServicesCard";
 
 const Services = () => {
   const Data = [
@@ -37,11 +37,15 @@ const Services = () => {
       <h2>خدمات ما</h2>
       <span>لورم ایپسوم متن ساختگی با تولید سادگی</span>
 
-      <div className="row d-flex justify-content-center">
+      <div className="row d-flex justify-content-center align-items-center">
         {Data?.map((data) => {
           return (
             <div className="col-md-2 col-sm-6 col-6" key={data.id}>
-              <Card title={data.title} desc={data.desc} image={data.image} />
+              <ServicesCard
+                title={data.title}
+                desc={data.desc}
+                image={data.image}
+              />
             </div>
           );
         })}
