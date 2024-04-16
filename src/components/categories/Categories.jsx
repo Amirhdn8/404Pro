@@ -20,10 +20,10 @@ const Categories = () => {
       <div className="container overflow-hidden text-center my-5">
         <h2>دسته بندی ها</h2>
 
-        <div className="row d-flex justify-content-center align-items-center">
+        <div className="row d-flex justify-content-center align-items-center mt-5">
           {Data?.map((data) => {
             return (
-              <div className={`col-md-2 col-sm-3 col-4 mx-2 mt-5 shadow-lg  mb-5 bg-body-tertiary rounded ${Style.card}`}key={data.id}>
+              <div className={`col-md-2 col-sm-3 col-4 mx-2 shadow-lg  mb-5 bg-body-tertiary rounded ${Style.card}`}key={data.id}>
                 <CategoriesCard image={data.image} title={data.title} />
               </div>
             );
