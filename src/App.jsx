@@ -6,6 +6,7 @@ import Services from "./components/services/Services";
 import Categories from "./components/categories/Categories";
 import Course from "./components/courses/Course";
 import News from "./components/news/News";
+import Professors from "./components/professors/Professors";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Categories />
         <Course />
         <News />
+        <Professors />
       </div>
     </>
   );
