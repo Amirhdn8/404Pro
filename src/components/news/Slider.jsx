@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import NewsCard from "./NewsCard";
 
-const Slider = () => {
+const Slider = ({ Data }) => {
   return (
     <>
       <Swiper
@@ -19,24 +19,13 @@ const Slider = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <NewsCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsCard />
-        </SwiperSlide>
+        {Data?.map((data) => {
+          return (
+            <SwiperSlide key={data.id}>
+              <NewsCard title={data.title} desc={data.desc} image={data.image} />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </>
   );

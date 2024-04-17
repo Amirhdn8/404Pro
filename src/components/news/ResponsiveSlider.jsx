@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 import NewsCard from "./NewsCard";
 
-const ResponsiveSlider = () => {
+const ResponsiveSlider = ({ Data }) => {
   return (
     <>
       <Swiper
@@ -16,20 +16,19 @@ const ResponsiveSlider = () => {
         pagination={false}
         navigation={true}
         modules={[EffectFlip, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper p-5"
       >
-        <SwiperSlide>
-          <NewsCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsCard />
-        </SwiperSlide>
+        {Data?.map((data) => {
+          return (
+            <SwiperSlide key={data.id}>
+              <NewsCard
+                title={data.title}
+                desc={data.desc}
+                image={data.image}
+              />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </>
   );
