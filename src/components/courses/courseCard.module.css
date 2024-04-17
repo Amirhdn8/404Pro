@@ -1,0 +1,29 @@
+.price {
+  font-size: 11px;
+  color: rgb(138, 202, 41);
+  font-weight: 800;
+}
+.title {
+  font-size: 12px;
+  background-color: #6666ff;
+}
+.desc {
+  font-size: 12px;
+}
+.txt {
+  font-size: 11px;
+  font-weight: 700;
+}
+.icon {
+  color: #6666ff;
+}
+.line {
+ 
+  border: 2px solid #6666ff ;
+}
+.btn{
+    padding: 5px 10px 5px 10px;
+    background-color: #6666ff;
+    border-radius: 50% 50%;
+    cursor: pointer;
+}
