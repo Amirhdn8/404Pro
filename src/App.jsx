@@ -5,7 +5,8 @@ import HeroSection from "./components/heroSection/HeroSection";
 import Services from "./components/services/Services";
 import Categories from "./components/categories/Categories";
 import Course from "./components/courses/Course";
-import StarRate from "./components/starRate/StarRate";
+import News from "./components/news/News";
+
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Services />
         <Categories />
         <Course />
-        
+        <News />
       </div>
     </>
   );
