@@ -1,29 +1,29 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/header/Header";
-import HeroSection from "./components/heroSection/HeroSection";
-import Services from "./components/services/Services";
-import Categories from "./components/categories/Categories";
-import Course from "./components/courses/Course";
-import News from "./components/news/News";
-import Professors from "./components/professors/Professors";
-import Offers from "./components/offers/Offers";
-
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import Landing from "./components/pages/Landing"
 function App() {
-  return (
-    <>
-      <div className="container-fluid">
-        <Header />
-        <HeroSection />
-        <Services />
-        <Categories />
-        <Course />
-        <News />
-        <Professors />
-        <Offers />
-      </div>
-    </>
-  );
+  const MainLayout = () => {
+    return (
+      <>
+        <div>
+          <Header />
+          <Outlet />
+        </div>
+      </>
+    );
+  };
+  return <>
+  
+    <BrowserRouter>
+     <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route path="/" element={<Landing />} />
+      </Route>
+     </Routes>
+    </BrowserRouter>
+  </>;
 }
 
 export default App;

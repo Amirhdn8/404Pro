@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <div className="container my-5">
       <div className="row d-flex justify-content-center align-items-center">
-        <div className={`col-md-6 col-sm-6 col-12 text-end `}>
+        <div className={`col-md-6 col-sm-6 col-12 text-end d-md-block`}>
           <h2 className="mb-4">آکادمی بحر</h2>
           <div className="col-md-8">
             <div style={{height:"fit-content"}}>
@@ -44,7 +44,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-5 col-sm-6">
+        <div className="col-md-5 col-sm-6 d-md-block d-sm-block d-none">
           <img
             src={img}
             alt=""
