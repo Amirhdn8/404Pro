@@ -44,7 +44,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-5 col-sm-6 d-md-block d-sm-block d-none">
+        <div className="col-md-5 col-sm-6  d-sm-block d-md-block d-none">
           <img
             src={img}
             alt=""
