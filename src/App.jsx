@@ -7,7 +7,7 @@ import Categories from "./components/categories/Categories";
 import Course from "./components/courses/Course";
 import News from "./components/news/News";
 import Professors from "./components/professors/Professors";
-
+import Offers from "./components/offers/Offers";
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <Course />
         <News />
         <Professors />
+        <Offers />
       </div>
     </>
   );

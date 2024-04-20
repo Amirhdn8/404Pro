@@ -20,15 +20,17 @@ const ProfessorsSlider = ({ Data }) => {
       >
         {Data?.map((data) => {
           return (
-            <SwiperSlide key={data.id} className=" d-md-none d-sm-none d-col-block">
-                <div className="col-8  m-auto">
-
-              <ProfessorsCard
-                image={data.image}
-                title={data.title}
-                desc={data.desc}
-              />
-                </div>
+            <SwiperSlide
+              key={data.id}
+              className=" d-md-none d-sm-none d-col-block"
+            >
+              <div className="col-8  m-auto">
+                <ProfessorsCard
+                  image={data.image}
+                  title={data.title}
+                  desc={data.desc}
+                />
+              </div>
             </SwiperSlide>
           );
         })}
