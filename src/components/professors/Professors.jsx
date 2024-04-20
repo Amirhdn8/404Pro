@@ -3,6 +3,8 @@ import ProfessorsCard from "./ProfessorsCard";
 import image1 from "../../assets/ostad1.png";
 import image2 from "../../assets/ostad2.png";
 import image3 from "../../assets/ostad3.png";
+import ProfessorsList from "./ProfessorsList";
+import ProfessorsSlider from "./ProfessorsSlider";
 
 const Professors = () => {
   const Data = [
@@ -30,17 +32,9 @@ const Professors = () => {
       <div className="container text-center my-5">
         <h2>اساتید برتر</h2>
         <div className="row mt-5 d-flex justify-content-center align-items-center">
-          {Data.map((data) => {
-            return (
-              <div className="col-md-3 col-sm-6 col-8  mt-5" key={data.id}>
-                <ProfessorsCard
-                  image={data.image}
-                  title={data.title}
-                  desc={data.desc}
-                />
-              </div>
-            );
-          })}
+          <ProfessorsList Data={Data} />
+
+          <ProfessorsSlider Data={Data} />
         </div>
       </div>
     </>
