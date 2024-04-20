@@ -50,7 +50,7 @@ const News = () => {
   return (
     <>
       <div className="container text-center my-5">
-        <h2>مقالات</h2>
+        <h2>اخبار و مقالات</h2>
         <div className="row mt-5 d-flex justify-content-center align-items-center">
           <div className="col-md-12 d-none  d-md-block">
             <Slider Data={Data} />
