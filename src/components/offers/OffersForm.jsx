@@ -17,6 +17,7 @@ const OffersForm = () => {
         .required("پر کردن این قسمت ضروریست!"),
       description: yup.string().required("پر کردن این قسمت ضروریست!"),
     });
+
   return (
     <>
       <Formik
@@ -45,7 +46,11 @@ const OffersForm = () => {
           </div>
 
           <div className="mb-4">
-            <Field className={`form-control ${Style.formInput}`} name="email" placeholder="ایمیل" />
+            <Field
+              className={`form-control ${Style.formInput}`}
+              name="email"
+              placeholder="ایمیل"
+            />
             <ErrorMessage
               component={"p"}
               name="email"
@@ -68,7 +73,9 @@ const OffersForm = () => {
             />
           </div>
 
-          <button className={`btn ${Style.formBtn} px-3`} type="submit">ثبت</button>
+          <button className={`btn ${Style.formBtn} px-3`} type="submit">
+            ثبت
+          </button>
         </Form>
       </Formik>
     </>

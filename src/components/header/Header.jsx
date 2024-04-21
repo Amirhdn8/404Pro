@@ -1,14 +1,15 @@
 import React from "react";
 import Style from "./header.module.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <>
       <nav className={`navbar navbar-expand-lg ${Style.header}`}>
         <div className="container-fluid">
-          <a className="navbar-brand" href="#" style={{fontWeight:"800" , color:"#6666FF"}}>
+          <Link className="navbar-brand" to={"/"} style={{fontWeight:"800" , color:"#6666FF" , fontSize:"18px"}}>
             BAHR ACADEMY
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,14 +24,14 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className={`navbar-nav text-white mb-2 mb-lg-0 ms-auto ${Style.navItem}`}>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link to={"/"} className="nav-link active" aria-current="page">
                   صفحه اصلی
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link to={"/corsemain"} className="nav-link">
                   دوره ها
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
