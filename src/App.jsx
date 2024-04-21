@@ -2,9 +2,9 @@ import React from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
-import Landing from "./components/pages/Landing"
+import Landing from "./components/pages/Landing";
 import CourseMainPage from "./components/pages/CourseMainPage";
-
+import NewsMain from "./components/newsMain/NewsMain";
 
 function App() {
   const MainLayout = () => {
@@ -17,17 +17,19 @@ function App() {
       </>
     );
   };
-  return <>
-  
-    <BrowserRouter>
-     <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route path="/" element={<Landing />} />
-        <Route path="/corsemain" element={ <CourseMainPage /> } />
-      </Route>
-     </Routes>
-    </BrowserRouter>
-  </>;
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route path="/" element={<Landing />} />
+            <Route path="/corsemain" element={<CourseMainPage />} />
+            <Route path="/newsmain" element={<NewsMain />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;
