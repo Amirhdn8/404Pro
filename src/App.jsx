@@ -5,6 +5,7 @@ import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import Landing from "./components/pages/Landing";
 import CourseMainPage from "./components/pages/CourseMainPage";
 import NewsMain from "./components/newsMain/NewsMain";
+import Wizard from "./Wizard";
 
 function App() {
   const MainLayout = () => {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route path="/corsemain" element={<CourseMainPage />} />
             <Route path="/newsmain" element={<NewsMain />} />
+            {/* <Route path="/auth/login" element={ <Wizard /> } /> */}
           </Route>
         </Routes>
       </BrowserRouter>
