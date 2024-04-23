@@ -1,0 +1,27 @@
+.formInput {
+  border-bottom: 2px solid #6666ff !important;
+  background: #ebebfd !important;
+  font-size: 15px !important;
+}
+.formBtn {
+  background: #6666ff !important;
+  color: white !important;
+}
+.formBtnBck {
+  background: #2929ae !important;
+  color: white !important;
+}
+.numbers > div {
+  height: 50px;
+  aspect-ratio: 1;
+  background-color: #e7e7e7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.numbers .active {
+  background-color: #7950f2;
+  color: #fff;
+}

@@ -53,8 +53,8 @@ const Header = () => {
             <button
               className={`text-white rounded-pill px-4 py-2 ms-5  ${Style.btn}`}
             >
-              ورود / ثبت نام
-            </button>
+                <Link className="text-decoration-none text-white" to={"/auth/login"} >ورود/ثبت نام</Link>
+              </button>
           </div>
         </div>
       </nav>
