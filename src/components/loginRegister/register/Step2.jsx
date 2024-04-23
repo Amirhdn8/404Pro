@@ -43,14 +43,14 @@ const Step2 = ({ setFormValue, next, Back }) => {
                 className={`btn mb-4 mt-4 ms-3 ${Style.formBtn}`}
                 type="submit"
               >
-                Next
+                ثبت
               </button>
               <button
                 className={`btn mb-4 mt-4 ${Style.formBtnBck}`}
                 onClick={Back}
                 type="button"
               >
-                Back
+                بازگشت
               </button>
             </div>
           </div>
