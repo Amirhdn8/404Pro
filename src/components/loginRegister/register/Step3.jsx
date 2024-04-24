@@ -30,12 +30,8 @@ const Step3 = ({ setFormValue, formValue }) => {
       >
         <Form>
           <div className="row d-flex justify-content-center align-items-center">
-            <div className="col-md-8 mb-4">
-              <span className="d-block mb-3">
-                {" "}
-                ایمیل
-                <WiDirectionDown size={45} />
-              </span>
+            <div className="col-md-8 mb-4 text-end">
+              <label className="d-block mb-3">ایمیل</label>
               <Field
                 name="email"
                 className={`form-control ${Style.formInput} `}
@@ -47,12 +43,8 @@ const Step3 = ({ setFormValue, formValue }) => {
                 className="text-danger mt-2"
               />
             </div>
-            <div className="col-md-8 mb-4">
-              <span className="d-block mb-3">
-                {" "}
-                رمزعبور
-                <WiDirectionDown size={45} />
-              </span>
+            <div className="col-md-8 mb-4 text-end">
+              <label className="d-block mb-3">رمزعبور</label>
               <Field
                 name="password"
                 className={`form-control ${Style.formInput} `}
@@ -67,7 +59,7 @@ const Step3 = ({ setFormValue, formValue }) => {
                 className={`btn mb-4 mt-4 ms-3 ${Style.formBtn}`}
                 type="submit"
               >
-                ثبت
+               ثبت اطلاعات
               </button>
             </div>
           </div>

@@ -7,7 +7,11 @@ const Header = () => {
     <>
       <nav className={`navbar navbar-expand-lg ${Style.header}`}>
         <div className="container-fluid">
-          <Link className="navbar-brand" to={"/"} style={{fontWeight:"800" , color:"#6666FF" , fontSize:"18px"}}>
+          <Link
+            className="navbar-brand"
+            to={"/"}
+            style={{ fontWeight: "800", color: "#6666FF", fontSize: "18px" }}
+          >
             BAHR ACADEMY
           </Link>
           <button
@@ -22,7 +26,9 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className={`navbar-nav text-white mb-2 mb-lg-0 ms-auto ${Style.navItem}`}>
+            <ul
+              className={`navbar-nav text-white mb-2 mb-lg-0 ms-auto ${Style.navItem}`}
+            >
               <li className="nav-item">
                 <Link to={"/"} className="nav-link active" aria-current="page">
                   صفحه اصلی
@@ -53,8 +59,13 @@ const Header = () => {
             <button
               className={`text-white rounded-pill px-4 py-2 ms-5  ${Style.btn}`}
             >
-                <Link className="text-decoration-none text-white" to={"/auth/login"} >ورود/ثبت نام</Link>
-              </button>
+              <Link
+                className="text-decoration-none text-white"
+                to={"/auth/login"}
+              >
+                ورود/ثبت نام
+              </Link>
+            </button>
           </div>
         </div>
       </nav>

@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Style from "./register.module.css";
-import { WiDirectionDown } from "react-icons/wi";
+
 
 const Step1 = ({ setFormValue, next, phoneNumber }) => {
   const validation = (values) =>
@@ -27,10 +27,10 @@ const Step1 = ({ setFormValue, next, phoneNumber }) => {
       >
         <Form>
           <div className="row d-flex justify-content-center align-items-center">
-            <div className="col-md-8">
-              <span className="d-block mb-4">
-                شماره تلفن خود را وارد کنید <WiDirectionDown size={45} />
-              </span>
+            <div className="col-md-8 text-end">
+              <label className="d-block mb-3">
+                شماره تلفن خود را وارد کنید 
+              </label>
               <Field
                 className={`form-control ${Style.formInput} `}
                 name="phoneNumber"
@@ -44,8 +44,7 @@ const Step1 = ({ setFormValue, next, phoneNumber }) => {
             </div>
           </div>
           <button className={`btn mt-4 mb-4 ${Style.formBtn}`} type="submit">
-            {" "}
-            ثبت{" "}
+            دریافت کد تایید
           </button>
         </Form>
       </Formik>
