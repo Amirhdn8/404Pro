@@ -19,7 +19,6 @@ const Landing = () => {
         <News />
         <Professors />
         <Offers />
-        <Footer />
       </div>
     </>
   );
