@@ -7,6 +7,7 @@ import CourseMainPage from "./components/pages/CourseMainPage";
 import NewsMain from "./components/newsMain/NewsMain";
 import LoginRegister from "./components/pages/LoginRegister";
 import Register from "./components/loginRegister/register/Register";
+import Footer from "./components/footer/Footer";
  
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <div>
           <Header />
           <Outlet />
+          <Footer />
         </div>
       </>
     );
