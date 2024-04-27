@@ -29,7 +29,7 @@ const Step3 = ({ setFormValue, formValue }) => {
         validationSchema={validation}
       >
         <Form>
-          <div className="row d-flex justify-content-center align-items-center">
+          <div className="row d-flex justify-content-center align-items-center text-center">
             <div className="col-md-8 mb-4 text-end">
               <label className="d-block mb-3">ایمیل</label>
               <Field
@@ -59,7 +59,7 @@ const Step3 = ({ setFormValue, formValue }) => {
                 className={`btn mb-4 mt-4 ms-3 ${Style.formBtn}`}
                 type="submit"
               >
-               ثبت اطلاعات
+                ثبت اطلاعات
               </button>
             </div>
           </div>

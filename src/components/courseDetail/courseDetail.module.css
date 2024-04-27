@@ -1,0 +1,53 @@
+.videoTxt {
+  border-bottom: 2px solid #6666ff !important;
+}
+.videoNumber {
+  border: 1px solid gray;
+  font-size: 12px;
+}
+.videoDesc {
+  font-size: 12px;
+}
+.time {
+  color: gray;
+  font-size: 12px;
+}
+.videoIcon {
+  color: #6666ff;
+}
+.courseDetail {
+  font-weight: 900;
+}
+.courseDetailTxt {
+  font-size: 13px;
+}
+.CourseDetailBtn {
+  background-color: #6666ff !important;
+  color: white !important;
+  font-size: 13px;
+}
+.timer{
+  border: 1px solid #6666ff;
+}
+.proffesorImg{
+  height: 60px;
+}
+.comment{
+  border-bottom: 1px solid #6666ff;
+}
+
+.userIcon{
+  color: #6666ff;
+}
+.formLabel{
+  font-size: 14px;
+}
+.formInput{
+  border-bottom: 2px solid #6666FF!important;
+  background: #ebebfd!important;
+  font-size: 13px !important;
+}
+.formBtn{
+  background: #6666FF!important;
+  color: white !important;
+}

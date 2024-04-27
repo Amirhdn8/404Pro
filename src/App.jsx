@@ -8,6 +8,7 @@ import NewsMain from "./components/newsMain/NewsMain";
 import LoginRegister from "./components/pages/LoginRegister";
 import Register from "./components/loginRegister/register/Register";
 import Footer from "./components/footer/Footer";
+import CourseDetailPage from "./components/pages/CourseDetailPage";
  
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<MainLayout />}>
             <Route path="/" element={<Landing />} />
             <Route path="/corsemain" element={<CourseMainPage />} />
+            <Route path="/corsedetail" element={ <CourseDetailPage /> } />
             <Route path="/newsmain" element={<NewsMain />} />
             <Route path="/auth/login" element={<LoginRegister />} />
             <Route path="/auth/register" element={ <Register /> } />
