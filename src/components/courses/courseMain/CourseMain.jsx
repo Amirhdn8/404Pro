@@ -1,9 +1,9 @@
 import React from "react";
-import img1 from "../../assets/Course1.png";
-import img2 from "../../assets/Course2.png";
-import img3 from "../../assets/Course3.png";
-import img4 from "../../assets/Course4.png";
-import CourseCard from "../courses/CourseCard";
+import img1 from "../../../assets/Course1.png";
+import img2 from "../../../assets/Course2.png";
+import img3 from "../../../assets/Course3.png";
+import img4 from "../../../assets/Course4.png";
+import CourseCard from "../../landing/courses/CourseCard";
 import { IoSearch } from "react-icons/io5";
 import Style from "./courseMain.module.css";
 
@@ -114,7 +114,11 @@ const CourseMain = () => {
           <div className="col-md-12 d-flex justify-content-center align-items-center mb-5">
             <div className="col-md-6 col-sm-12 col-8">
               <div className={`input-group mt-4 ${Style.search}`}>
-                <button className={`btn ${Style.button}`} type="button" id="button-addon1">
+                <button
+                  className={`btn ${Style.button}`}
+                  type="button"
+                  id="button-addon1"
+                >
                   <IoSearch className="text-white" />
                 </button>
                 <input

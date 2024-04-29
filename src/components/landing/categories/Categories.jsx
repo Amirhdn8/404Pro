@@ -1,9 +1,9 @@
 import React from "react";
-import Categories1 from "../../assets/Categories1.png";
-import Categories2 from "../../assets/Categories2.png";
-import Categories3 from "../../assets/Categories3.png";
-import Categories4 from "../../assets/Categories4.png";
-import Categories5 from "../../assets/Categories5.png";
+import Categories1 from "../../../assets/Categories1.png";
+import Categories2 from "../../../assets/Categories2.png";
+import Categories3 from "../../../assets/Categories3.png";
+import Categories4 from "../../../assets/Categories4.png";
+import Categories5 from "../../../assets/Categories5.png";
 import CategoriesCard from "./CategoriesCard";
 
 const Categories = () => {

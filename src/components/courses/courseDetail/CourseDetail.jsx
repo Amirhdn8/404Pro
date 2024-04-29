@@ -3,10 +3,10 @@ import CourseDesc from "./CourseDesc";
 import CourseVideo from "./CourseVideo";
 import CourseLeftSide from "./CourseLeftSide";
 import Comments from "./Comments";
-import img1 from "../../assets/Course1.png";
-import img2 from "../../assets/Course2.png";
-import img3 from "../../assets/Course3.png";
-import img4 from "../../assets/Course4.png";
+import img1 from "../../../assets/Course1.png";
+import img2 from "../../../assets/Course2.png";
+import img3 from "../../../assets/Course3.png";
+import img4 from "../../../assets/Course4.png";
 import CourseResponsiveSlider from "./CourseResponsiveSlider";
 import CourseSlider from "./CourseSlider";
 

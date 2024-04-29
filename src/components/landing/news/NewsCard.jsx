@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../assets/Course1.png";
+import image from "../../../assets/Course1.png";
 
 const NewsCard = ({ title, image, desc }) => {
   return (

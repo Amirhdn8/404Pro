@@ -5,7 +5,7 @@ import "swiper/css/effect-flip";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectFlip, Pagination, Navigation } from "swiper/modules";
-import CourseCard from "../courses/CourseCard";
+import CourseCard from "../../landing/courses/CourseCard";
 
 const CourseResponsiveSlider = ({ Data }) => {
   return (

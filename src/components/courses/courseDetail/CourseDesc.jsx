@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../assets/courseDetail.png";
+import image from "../../../assets/courseDetail.png";
 
 const CourseDesc = () => {
   return (

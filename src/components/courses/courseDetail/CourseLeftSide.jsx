@@ -1,6 +1,6 @@
 import React from "react";
-import Timer from "./Timer";
-import image from "../../assets/ostad1.png";
+import Timer from "../../common/Timer/Timer";
+import image from "../../../assets/ostad1.png";
 import Style from "./courseDetail.module.css";
 
 const CourseLeftSide = () => {

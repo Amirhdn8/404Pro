@@ -35,12 +35,12 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to={"/corsemain"} className="nav-link">
+                <Link to={"/courseMain"} className="nav-link">
                   دوره ها
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to={"/newsmain"} className="nav-link">
+                <Link to={"/newsMain"} className="nav-link">
                   اخبار
                 </Link>
               </li>

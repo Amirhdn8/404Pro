@@ -1,9 +1,9 @@
 import React from "react";
 import CourseCard from "./CourseCard";
-import img1 from "../../assets/Course1.png";
-import img2 from "../../assets/Course2.png";
-import img3 from "../../assets/Course3.png";
-import img4 from "../../assets/Course4.png";
+import img1 from "../../../assets/Course1.png";
+import img2 from "../../../assets/Course2.png";
+import img3 from "../../../assets/Course3.png";
+import img4 from "../../../assets/Course4.png";
 
 const Course = () => {
   const Data = [

@@ -1,7 +1,7 @@
 import React from "react";
 import Style from "./courseCard.module.css";
 import { FaRegPlayCircle } from "react-icons/fa";
-import StarRating from "../starRate/StarRate";
+import StarRating from "../../common/starRate/StarRate";
 import { FaChevronLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -43,7 +43,10 @@ const CourseCard = ({ image, title, price, desc, number }) => {
             <div className="col-md-6 col-sm-4 col-4 text-white text-start">
               <span className={`${Style.btn}`}>
                 {" "}
-                <Link className="text-decoration-none text-white" to="/corsedetail">
+                <Link
+                  className="text-decoration-none text-white"
+                  to="/courseDetail"
+                >
                   <FaChevronLeft size={15} />{" "}
                 </Link>
               </span>

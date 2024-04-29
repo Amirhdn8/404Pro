@@ -1,8 +1,8 @@
 import React from "react";
-import business2 from "../../assets/business2.png";
-import business3 from "../../assets/business3.png";
-import business4 from "../../assets/business4.png";
-import business5 from "../../assets/business5.png";
+import business2 from "../../../assets/business2.png";
+import business3 from "../../../assets/business3.png";
+import business4 from "../../../assets/business4.png";
+import business5 from "../../../assets/business5.png";
 import ServicesCard from "./ServicesCard";
 
 const Services = () => {

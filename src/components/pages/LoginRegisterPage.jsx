@@ -1,10 +1,10 @@
 import React from 'react'
 import Login from '../loginRegister/login/Login'
 
-const LoginRegister = () => {
+const LoginRegisterPage = () => {
   return (
     <Login />
   )
 }
 
-export default LoginRegister
+export default LoginRegisterPage

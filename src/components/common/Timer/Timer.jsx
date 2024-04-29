@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Style from "./courseDetail.module.css";
 
 const Timer = ({ duration }) => {
   const [time, setTime] = useState(duration);

@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../assets/offers.png";
+import image from "../../../assets/offers.png";
 import OffersForm from "./OffersForm";
 
 const Offers = () => {

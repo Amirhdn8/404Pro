@@ -1,13 +1,13 @@
 import React from "react";
 import Style from "./newsMain.module.css";
 import { IoSearch } from "react-icons/io5";
-import image1 from "../../assets/news1.jpg";
-import image2 from "../../assets/news2.jpg";
-import image3 from "../../assets/news3.jpg";
-import image4 from "../../assets/news4.jpg";
-import image5 from "../../assets/news5.jpg";
-import image6 from "../../assets/news6.jpg";
-import NewsCard from "../news/NewsCard";
+import image1 from "../../../assets/news1.jpg";
+import image2 from "../../../assets/news2.jpg";
+import image3 from "../../../assets/news3.jpg";
+import image4 from "../../../assets/news4.jpg";
+import image5 from "../../../assets/news5.jpg";
+import image6 from "../../../assets/news6.jpg";
+import NewsCard from "../../landing/news/NewsCard";
 
 const NewsMain = () => {
   const Data = [

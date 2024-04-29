@@ -1,5 +1,5 @@
 import React from "react";
-import image2 from "../../assets/video.png";
+import image2 from "../../../assets/video.png";
 import Style from "./courseDetail.module.css";
 import { FaDownload } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";

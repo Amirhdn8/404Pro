@@ -1,8 +1,8 @@
 import React from "react";
 import ProfessorsCard from "./ProfessorsCard";
-import image1 from "../../assets/ostad1.png";
-import image2 from "../../assets/ostad2.png";
-import image3 from "../../assets/ostad3.png";
+import image1 from "../../../assets/ostad1.png";
+import image2 from "../../../assets/ostad2.png";
+import image3 from "../../../assets/ostad3.png";
 import ProfessorsList from "./ProfessorsList";
 import ProfessorsSlider from "./ProfessorsSlider";
 

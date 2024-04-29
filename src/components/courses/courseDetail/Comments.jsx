@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Style from "./courseDetail.module.css";
 import { FaRegUserCircle } from "react-icons/fa";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as yup from "yup";
 
 const Comments = () => {
   const [comment, setComment] = useState([
@@ -22,6 +23,19 @@ const Comments = () => {
     console.log("Form submited!!!", values);
     setComment([...comment, values]);
   };
+
+  const validation = () =>
+    yup.object().shape({
+      name: yup
+        .string()
+        .required("پر کردن این بخش ضروریست")
+        .min(3, "کوتاه است!"),
+      desc: yup
+        .string()
+        .required("پر کردن این بخش ضروریست")
+        .min(3, "کوتاه است!")
+        .max(50 , "بیش از حد مجاز"),
+    });
 
   return (
     <>
@@ -53,6 +67,7 @@ const Comments = () => {
           <Formik
             initialValues={{ name: "", desc: "" }}
             onSubmit={(values) => onSubmit(values)}
+            validationSchema={validation}
           >
             <Form className="mt-4">
               <div className="mt-3">
@@ -63,6 +78,11 @@ const Comments = () => {
                   className={`form-control ${Style.formInput}`}
                   name="name"
                   placeholder="وارد کنید ..."
+                />
+                <ErrorMessage
+                  component={"p"}
+                  name="name"
+                  className="text-danger mt-2"
                 />
               </div>
               <div className="mt-3">
@@ -76,6 +96,11 @@ const Comments = () => {
                   rows="3"
                   name="desc"
                   placeholder="وارد کنید ..."
+                />
+                <ErrorMessage
+                  component={"p"}
+                  name="desc"
+                  className="text-danger mt-2"
                 />
               </div>
               <button className={`btn mt-3 ${Style.formBtn}`} type="submit">

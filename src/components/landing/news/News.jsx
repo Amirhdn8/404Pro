@@ -1,12 +1,12 @@
 import React from "react";
 import Slider from "./Slider";
 import ResponsiveSlider from "./ResponsiveSlider";
-import image1 from "../../assets/news1.jpg";
-import image2 from "../../assets/news2.jpg";
-import image3 from "../../assets/news3.jpg";
-import image4 from "../../assets/news4.jpg";
-import image5 from "../../assets/news5.jpg";
-import image6 from "../../assets/news6.jpg";
+import image1 from "../../../assets/news1.jpg";
+import image2 from "../../../assets/news2.jpg";
+import image3 from "../../../assets/news3.jpg";
+import image4 from "../../../assets/news4.jpg";
+import image5 from "../../../assets/news5.jpg";
+import image6 from "../../../assets/news6.jpg";
 
 const News = () => {
   const Data = [

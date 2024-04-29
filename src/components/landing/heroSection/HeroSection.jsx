@@ -1,6 +1,6 @@
 import React from "react";
 import Style from "./heroSection.module.css";
-import img from "../../assets/developer.png";
+import img from "../../../assets/developer.png";
 import { TypeAnimation } from "react-type-animation";
 import { IoSearch } from "react-icons/io5";
 
