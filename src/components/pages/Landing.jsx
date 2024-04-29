@@ -7,6 +7,7 @@ import News from "../news/News";
 import Professors from "../professors/Professors";
 import Offers from "../offers/Offers";
 import Footer from "../footer/Footer";
+import LikeDislike from "../like Dislike/LikeDislike";
 
 const Landing = () => {
   return (
