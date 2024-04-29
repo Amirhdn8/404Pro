@@ -9,6 +9,7 @@ import CourseMainPage from "./components/courses/courseMain/CourseMain";
 import NewsMain from "./components/news/newsMain/NewsMain";
 import LoginRegisterPage from "./components/pages/LoginRegisterPage";
 import Register from "./components/loginRegister/register/Register";
+import NewsDetailPage from "./components/pages/NewsDetailPage";
 
 function App() {
   const MainLayout = () => {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/courseMain" element={<CourseMainPage />} />
             <Route path="/courseDetail" element={<CourseDetailPage />} />
             <Route path="/newsMain" element={<NewsMain />} />
+            <Route path="/newsDetail" element={<NewsDetailPage />} />
             <Route path="/auth/login" element={<LoginRegisterPage />} />
             <Route path="/auth/register" element={<Register />} />
           </Route>

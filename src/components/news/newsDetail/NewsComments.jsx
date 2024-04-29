@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Style from "./courseDetail.module.css";
+import Style from "./newsDetail.module.css";
 import { FaRegUserCircle } from "react-icons/fa";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 
-const Comments = () => {
+const NewsComments = () => {
   const [comment, setComment] = useState([
     {
       name: "امیرحسین",
@@ -34,7 +34,7 @@ const Comments = () => {
         .string()
         .required("پر کردن این بخش ضروریست")
         .min(3, "کوتاه است!")
-        .max(50 , "بیش از حد مجاز"),
+        .max(50, "بیش از حد مجاز"),
     });
 
   return (
@@ -114,4 +114,4 @@ const Comments = () => {
   );
 };
 
-export default Comments;
+export default NewsComments;

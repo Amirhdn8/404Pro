@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../../assets/Course1.png";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ title, image, desc }) => {
   return (
@@ -14,7 +14,7 @@ const NewsCard = ({ title, image, desc }) => {
           className="btn text-white"
           style={{ background: "#6666FF", fontSize: "13px", cursor: "pointer" }}
         >
-          بیشتر...
+          <Link className="text-white text-decoration-none" to="/newsDetail">بیشتر...</Link>
         </button>
       </div>
     </div>

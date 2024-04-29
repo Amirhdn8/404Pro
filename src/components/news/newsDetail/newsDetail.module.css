@@ -1,0 +1,25 @@
+.iconColor{
+    color: #6666FF;
+}
+.txt{
+    font-size: 13px;
+}
+.comment{
+    border-bottom: 1px solid #6666ff;
+  }
+  
+  .userIcon{
+    color: #6666ff;
+  }
+  .formLabel{
+    font-size: 14px;
+  }
+  .formInput{
+    border-bottom: 2px solid #6666FF!important;
+    background: #ebebfd!important;
+    font-size: 13px !important;
+  }
+  .formBtn{
+    background: #6666FF!important;
+    color: white !important;
+  }
