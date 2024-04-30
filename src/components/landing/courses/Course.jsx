@@ -4,7 +4,8 @@ import img1 from "../../../assets/Course1.png";
 import img2 from "../../../assets/Course2.png";
 import img3 from "../../../assets/Course3.png";
 import img4 from "../../../assets/Course4.png";
-
+import Button from "../../common/button/Button";
+import { Link } from "react-router-dom";
 const Course = () => {
   const Data = [
     {
@@ -58,6 +59,11 @@ const Course = () => {
             </div>
           );
         })}
+        <div>
+          <Link to="courseMain" className="text-decoration-none text-white">
+            <Button text="همه دوره ها" />
+          </Link>
+        </div>
       </div>
     </div>
   );
