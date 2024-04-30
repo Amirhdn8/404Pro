@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Style from "./offersForm.module.css";
+import Button from "../../common/button/Button";
 
 const OffersForm = () => {
   const validation = (values) =>
@@ -73,9 +74,7 @@ const OffersForm = () => {
             />
           </div>
 
-          <button className={`btn ${Style.formBtn} px-3`} type="submit">
-            ثبت
-          </button>
+          <Button text="ثبت" />
         </Form>
       </Formik>
     </>

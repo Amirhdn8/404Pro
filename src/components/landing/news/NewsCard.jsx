@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "../../common/button/Button"
 
 const NewsCard = ({ title, image, desc }) => {
   return (
@@ -10,12 +11,9 @@ const NewsCard = ({ title, image, desc }) => {
         <p className="card-text mt-3 d-block" style={{ fontSize: "12px" }}>
           {desc}
         </p>
-        <button
-          className="btn text-white"
-          style={{ background: "#6666FF", fontSize: "13px", cursor: "pointer" }}
-        >
-          <Link className="text-white text-decoration-none" to="/newsDetail">بیشتر...</Link>
-        </button>
+        <Link className="text-white text-decoration-none" to="/newsDetail">
+          <Button text="بیشتر..." />
+        </Link>
       </div>
     </div>
   );

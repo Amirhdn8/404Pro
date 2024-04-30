@@ -59,7 +59,7 @@ const Course = () => {
             </div>
           );
         })}
-        <div>
+        <div className="mt-4">
           <Link to="courseMain" className="text-decoration-none text-white">
             <Button text="همه دوره ها" />
           </Link>

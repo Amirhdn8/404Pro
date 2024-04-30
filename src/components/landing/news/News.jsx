@@ -7,6 +7,8 @@ import image3 from "../../../assets/news3.jpg";
 import image4 from "../../../assets/news4.jpg";
 import image5 from "../../../assets/news5.jpg";
 import image6 from "../../../assets/news6.jpg";
+import { Link } from "react-router-dom";
+import Button from "../../common/button/Button"
 
 const News = () => {
   const Data = [
@@ -57,6 +59,12 @@ const News = () => {
           </div>
           <div className=" col-sm-10 col-12 d-sm-block d-md-none">
             <ResponsiveSlider Data={Data} />
+          </div>
+          <div className="mt-4">
+            <Link to="/newsMain" className="text-decoration-none text-white">
+
+              <Button text="همه اخبار" />
+            </Link>
           </div>
         </div>
       </div>

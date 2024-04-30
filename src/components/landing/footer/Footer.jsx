@@ -53,6 +53,7 @@ const Footer = () => {
                 placeholder="دنبال چیزی هستید"
                 aria-label="Example text with button addon"
                 aria-describedby="button-addon1"
+                style={{ border: "1px solid #6666FF" }}
               />
             </div>
           </div>
@@ -62,7 +63,7 @@ const Footer = () => {
           <div className="row d-flex justify-content-center">
             <div className="col-md-12 mt-4">
               <h6 style={{ fontWeight: "800" }}>ارتباط با ما</h6>
-              <div style={{fontSize:"13px"}}>
+              <div style={{ fontSize: "13px" }}>
                 <span className="d-block mt-3">
                   آدرس : ساری بلوار آزادی نبش ایزد طلب
                 </span>
@@ -70,9 +71,6 @@ const Footer = () => {
                 <span className="d-block mt-3">درباره ما : کارگاه ری اکت</span>
               </div>
             </div>
-
-            <div className="col-md-6"></div>
-            <div className="col-md-6"></div>
           </div>
         </div>
       </div>
