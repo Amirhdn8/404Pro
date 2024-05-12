@@ -1,7 +1,7 @@
 import React from "react";
-import AsidePanel from "../panel/rightSide/AsidePanel";
+import AsidePanel from "../components/panel/rightSide/AsidePanel";
 import { Outlet } from "react-router-dom";
-import MobileDropDownMenu from "../panel/rightSide/MobileDropDownMenu";
+import MobileDropDownMenu from "../components/panel/rightSide/MobileDropDownMenu";
 
 const Dashboard = () => {
   return (
@@ -14,7 +14,7 @@ const Dashboard = () => {
           <div className="col-md-12 d-md-block d-lg-none border border-black">
             <MobileDropDownMenu />
           </div>
-          <div class="col-12 col-lg-9 rounded p-3 bg-white" >
+          <div class="col-12 col-lg-9 rounded p-3 bg-white">
             <Outlet />
           </div>
         </div>

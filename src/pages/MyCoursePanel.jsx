@@ -1,5 +1,5 @@
 import React from 'react'
-import MyCourse from '../panel/myCourse/MyCourse'
+import MyCourse from '../components/panel/myCourse/MyCourse'
 
 const MyCoursePanel = () => {
   return (

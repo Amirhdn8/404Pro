@@ -1,5 +1,5 @@
 import React from 'react'
-import EditProfile from '../panel/editProfile/EditProfile'
+import EditProfile from '../components/panel/editProfile/EditProfile'
 
 const EditProfilePage = () => {
   return (

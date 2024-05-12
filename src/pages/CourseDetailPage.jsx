@@ -1,5 +1,5 @@
 import React from "react";
-import CourseDetail from "../courses/courseDetail/CourseDetail";
+import CourseDetail from "../components/courses/courseDetail/CourseDetail";
 
 const CourseDetailPage = () => {
   return <CourseDetail />;
