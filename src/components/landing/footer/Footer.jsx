@@ -6,7 +6,7 @@ import FooterLeftSide from "./FooterLeftSide";
 
 const Footer = () => {
   return (
-    <div className="container-fluid mt-5" style={{ background: "#ebebfd" }}>
+    <div className="container-fluid" style={{ background: "#ebebfd" }}>
       <div className="row d-flex justify-content-center">
         <div className="col-md-4 col-sm-12 mb-5 text-center mt-4">
           <h6 style={{ fontWeight: "800" }}> شبکه های اجتماعی </h6>

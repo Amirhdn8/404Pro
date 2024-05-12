@@ -1,0 +1,39 @@
+.leftSide {
+  background: rgb(234, 234, 234);
+  border-radius: 10px;
+}
+.title {
+  font-size: 17px;
+  font-weight: 900;
+}
+.dashbordProfile {
+  border: 2px solid #6666ff;
+  border-radius: 5px;
+}
+.dashbordTxtTitle {
+  font-weight: 700;
+  color: darkorchid;
+  font-size: 15px;
+}
+.dashbordTxtDesc {
+  font-weight: 600;
+  font-size: 14px;
+}
+.courseIcon{
+    color: #6666ff;
+}
+.courseTitle {
+  font-weight: 800;
+}
+.cardTitle{
+    font-weight: 500;
+    font-size: 14px;
+}
+.cardProffesor{
+  font-size: 11px;
+  font-weight: 400;
+}
+.cardPrice{
+  font-size: 12px;
+  color: #6666ff;
+}

@@ -14,7 +14,7 @@ const Register = () => {
     password: "",
   });
 
-  console.log(formData);
+  // console.log(formData);
 
   const nextStep = () => {
     setCurrentStep(currentStep + 1);
@@ -30,11 +30,17 @@ const Register = () => {
         <h2 className="my-5">ایجاد حساب کاربری</h2>
         <div className="row d-flex justify-content-center align-items-center mt-5">
           <div className="col-md-6 col-sm-10 col-10 shadow-lg p-3 mb-5 bg-white rounded">
-            <div className={`${Style.numbers} d-flex justify-content-center my-5`}>
-              <div className={`ms-5 ${currentStep >= 3 ? `${Style.active}` : ""}`}>
+            <div
+              className={`${Style.numbers} d-flex justify-content-center my-5`}
+            >
+              <div
+                className={`ms-5 ${currentStep >= 3 ? `${Style.active}` : ""}`}
+              >
                 3
               </div>
-              <div className={`ms-5 ${currentStep >= 2 ? `${Style.active}` : ""}`}>
+              <div
+                className={`ms-5 ${currentStep >= 2 ? `${Style.active}` : ""}`}
+              >
                 2
               </div>
               <div className={`${currentStep >= 1 ? `${Style.active}` : ""}`}>
@@ -48,7 +54,7 @@ const Register = () => {
                     setFormData({ ...formData, phoneNumber: formValue })
                   }
                   next={nextStep}
-                  phoneNumber={formData.phoneNumber}
+                  phoneNumberValue={formData.phoneNumber}
                 />
               )}
 
@@ -71,13 +77,19 @@ const Register = () => {
                       password: data.password,
                     })
                   }
+                  formValue={formData}
                 />
               )}
             </div>
           </div>
 
           <div className="col-md-6 d-none d-md-block">
-            <img src={image} className="img-fluid" style={{height:"450px"}} alt="" />
+            <img
+              src={image}
+              className="img-fluid"
+              style={{ height: "450px" }}
+              alt=""
+            />
           </div>
         </div>
       </div>

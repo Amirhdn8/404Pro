@@ -1,0 +1,10 @@
+.panel {
+  margin: 120px auto;
+}
+.rightSide {
+  background: #6666ff;
+  border-radius: 10px;
+}
+.link{
+  font-size: 14px;
+}

@@ -17,8 +17,9 @@ const Step3 = ({ setFormValue, formValue }) => {
     });
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     setFormValue(data);
+    console.log(formValue);
   };
 
   return (

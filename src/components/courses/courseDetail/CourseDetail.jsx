@@ -80,7 +80,7 @@ const CourseDetail = () => {
 
   return (
     <div className="container">
-      <div className="row d-flex justify-content-center  mt-5">
+      <div className="row d-flex justify-content-center mt-5">
         <div className="col-md-8 col-sm-12 col-11 shadow-sm p-3 mb-5 bg-white rounded">
           <div className="col-md-12">
             <h5 className="title"> دوره پیشرفته هک و امنیت </h5>
@@ -102,7 +102,7 @@ const CourseDetail = () => {
             <div className="col-md-12 d-none d-md-block mt-5">
               <CourseSlider Data={Data} />
             </div>
-            <div className="col-sm-10 col-10 d-md-none d-sm-block">
+            <div className="col-sm-10 col-12 d-md-none d-sm-block">
               <CourseResponsiveSlider Data={Data} />
             </div>
           </div>
