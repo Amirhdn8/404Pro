@@ -10,12 +10,12 @@ const MobileDropDownMenu = () => {
       label: "داشبورد",
     },
     {
-      route: "/editProfile",
+      route: "/dashboard/editProfile",
       icon: <LuLayoutPanelLeft size={25} className="text-white ms-2" />,
       label: "ویرایش  پروفایل",
     },
     {
-      route: "/myCourses",
+      route: "/dashboard/myCourses",
       icon: <LuLayoutPanelLeft size={25} className="text-white ms-2" />,
       label: "دوره های من",
     },
@@ -44,11 +44,11 @@ const MobileDropDownMenu = () => {
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        Dropdown button
+        منو حساب کاربری
       </button>
       <ul className="dropdown-menu">
         {links.map((link) => (
-          <Link to={link.route}>
+          <Link className="text-decoration-none text-black" to={link.route}>
             <li className="dropdown-item">
               <span> {link.icon} </span>
               <span> {link.label} </span>

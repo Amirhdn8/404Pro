@@ -31,7 +31,7 @@ const UserDashbord = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container mb-5">
         <div
           className="d-flex justify-content-between align-items-center pb-1"
           style={{ borderBottom: "2px solid #94a3b8" }}

@@ -57,7 +57,7 @@ const News = () => {
           <div className="col-md-12 d-none d-md-block">
             <Slider Data={Data} />
           </div>
-          <div className=" col-sm-10 col-12 d-sm-block d-md-none">
+          <div className=" col-sm-10 col-11 d-sm-block d-md-none">
             <ResponsiveSlider Data={Data} />
           </div>
           <div className="mt-4">

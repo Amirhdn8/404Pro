@@ -34,7 +34,9 @@ const Professors = () => {
         <div className="row mt-5 d-flex justify-content-center align-items-center">
           <ProfessorsList Data={Data} />
 
-          <ProfessorsSlider Data={Data} />
+          <div className="col-12">
+            <ProfessorsSlider Data={Data} />
+          </div>
         </div>
       </div>
     </>

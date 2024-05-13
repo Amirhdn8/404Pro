@@ -2,7 +2,6 @@ import React from "react";
 import { LuLayoutPanelLeft } from "react-icons/lu";
 import { NavLink, useLocation } from "react-router-dom";
 import Style from "./rightSide.module.css";
-import MobileDropDownMenu from "./MobileDropDownMenu";
 
 const AsidePanel = () => {
   const links = [
