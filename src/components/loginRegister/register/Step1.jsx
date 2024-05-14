@@ -1,8 +1,13 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Style from "./register.module.css";
+import { getVerifyCode } from "../../../services/api/authApi";
+import toast from "react-hot-toast";
+import { useState } from "react";
 
 const Step1 = ({ setFormValue, next, phoneNumberValue }) => {
+  const [isPending, setIsPeinding] = useState(false);
+
   const initialValues = {
     phoneNumber: "" || phoneNumberValue,
   };
@@ -13,12 +18,20 @@ const Step1 = ({ setFormValue, next, phoneNumberValue }) => {
       .min(7, "کوتاه است"),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
-    setFormValue({
-      phoneNumber: data.phoneNumber,
-    });
-    next();
+  const onSubmit = async (data) => {
+    try {
+      setIsPeinding(true);
+      const res = await getVerifyCode(data.phoneNumber);
+      if (res.status) {
+        next();
+        setFormValue(data.phoneNumber);
+        toast.success(res.message);
+      }
+    } catch (error) {
+      toast.error(error);
+    } finally {
+      setIsPeinding(false);
+    }
   };
 
   return (
@@ -46,8 +59,12 @@ const Step1 = ({ setFormValue, next, phoneNumberValue }) => {
               />
             </div>
           </div>
-          <button className={`btn mt-4 mb-4 ${Style.formBtn}`} type="submit">
-            دریافت کد تایید
+          <button
+            disabled={isPending}
+            className={`btn mt-4 mb-4 ${Style.formBtn}`}
+            type="submit"
+          >
+            {isPending ? "منتظر بمانید" : "دریافت کد تایید"}
           </button>
         </Form>
       </Formik>

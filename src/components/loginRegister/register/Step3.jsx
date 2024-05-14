@@ -1,9 +1,15 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Style from "./register.module.css";
-import { WiDirectionDown } from "react-icons/wi";
+import { signUpUser } from "../../../services/api/authApi";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import { useState } from "react";
 
-const Step3 = ({ setFormValue, formValue }) => {
+const Step3 = ({ phoneNumber }) => {
+  // const [isPending, setIsPeinding] = useState(false);
+  const navigate = useNavigate();
+
   const validation = (values) =>
     yup.object().shape({
       email: yup
@@ -16,10 +22,21 @@ const Step3 = ({ setFormValue, formValue }) => {
         .required("پر کردن این بخش ضروریست"),
     });
 
-  const onSubmit = (data) => {
-    // console.log(data);
-    setFormValue(data);
-    console.log(formValue);
+  const onSubmit = async (data) => {
+    try {
+      // setIsPeinding(true);
+      const res = await signUpUser({
+        password,
+        gmail: data.email,
+        phoneNumber,
+      });
+      if (res.status) {
+        navigate("/auth/login");
+        toast.success("موفقیت آمیز بود");
+      }
+    } catch (error) {
+      toast.error(error);
+    } 
   };
 
   return (
@@ -35,7 +52,7 @@ const Step3 = ({ setFormValue, formValue }) => {
               <label className="d-block mb-3">ایمیل</label>
               <Field
                 name="email"
-                className={`form-control ${Style.formInput} `}
+                className={`form-control ${Style.formInput}`}
                 placeholder="وارد کنید..."
               />
               <ErrorMessage

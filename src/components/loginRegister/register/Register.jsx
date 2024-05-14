@@ -10,8 +10,6 @@ const Register = () => {
   const [formData, setFormData] = useState({
     phoneNumber: "",
     verifyCode: "",
-    email: "",
-    password: "",
   });
 
   // console.log(formData);
@@ -23,6 +21,8 @@ const Register = () => {
   const prevStep = () => {
     setCurrentStep(currentStep - 1);
   };
+
+  console.log(formData);
 
   return (
     <>
@@ -60,25 +60,14 @@ const Register = () => {
 
               {currentStep === 2 && (
                 <Step2
-                  setFormValue={(formValue) =>
-                    setFormData({ ...formData, verifyCode: formValue })
-                  }
                   next={nextStep}
                   Back={prevStep}
+                  phoneNumber={formData.phoneNumber}
                 />
               )}
 
               {currentStep === 3 && (
-                <Step3
-                  setFormValue={(data) =>
-                    setFormData({
-                      ...formData,
-                      email: data.email,
-                      password: data.password,
-                    })
-                  }
-                  formValue={formData}
-                />
+                <Step3 phoneNumber={formData.phoneNumber} />
               )}
             </div>
           </div>

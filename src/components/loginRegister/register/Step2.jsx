@@ -1,8 +1,12 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Style from "./register.module.css";
+import { sendVerifyCode } from "../../../services/api/authApi";
+import toast from "react-hot-toast";
+import { useState } from "react";
 
-const Step2 = ({ setFormValue, next, Back }) => {
+const Step2 = ({ setFormValue, next, Back, phoneNumber }) => {
+  const [isPending, setIsPeinding] = useState(false);
   const validation = (values) =>
     yup.object().shape({
       verifyCode: yup
@@ -10,10 +14,22 @@ const Step2 = ({ setFormValue, next, Back }) => {
         .required("پر کردن این بخش ضروریست!")
         .min(4, "کوتاه است"),
     });
-  const onSubmit = (data) => {
-    console.log(data);
-    setFormValue(data);
-    next();
+  const onSubmit = async (data) => {
+    try {
+      setIsPeinding(true);
+      const res = await sendVerifyCode({
+        phoneNumber,
+        verifyCode: data.verifyCode,
+      });
+      if (res.status) {
+        next();
+        toast.success(res.message);
+      }
+    } catch (error) {
+      toast.error(error);
+    } finally {
+      setIsPeinding(false);
+    }
   };
   return (
     <>
@@ -25,9 +41,7 @@ const Step2 = ({ setFormValue, next, Back }) => {
         <Form>
           <div className="row d-flex justify-content-center align-items-center">
             <div className="col-md-8">
-              <label className="d-block mb-3 text-end">
-                کد فعال سازی 
-              </label>
+              <label className="d-block mb-3 text-end">کد فعال سازی</label>
               <Field
                 name="verifyCode"
                 className={`form-control ${Style.formInput} `}
@@ -41,8 +55,9 @@ const Step2 = ({ setFormValue, next, Back }) => {
               <button
                 className={`btn mb-4 mt-4 ms-3 ${Style.formBtn}`}
                 type="submit"
+                disabled={isPending}
               >
-                مرحله بعد
+                {isPending ? "منتظر بمانید" : "مرحله بعد"}
               </button>
               <button
                 className={`btn mb-4 mt-4 ${Style.formBtnBck}`}
