@@ -15,6 +15,7 @@ import EditProfilePage from "./pages/EditProfilePage";
 import MyCoursePanel from "./pages/MyCoursePanel";
 import Header from "./components/landing/header/Header";
 import Footer from "./components/landing/footer/Footer";
+import ForgetPassPage from "./pages/ForgetPassPage";
 function App() {
   const MainLayout = () => {
     return (
@@ -40,6 +41,7 @@ function App() {
             <Route path="/newsDetail" element={<NewsDetailPage />} />
             <Route path="/auth/login" element={<LoginPage />} />
             <Route path="/auth/register" element={<RegisterPage />} />
+            <Route path="/auth/forgetPassword" element={<ForgetPassPage />} />
             <Route element={<Dashboard />}>
               <Route path="/dashboard" element={<UserDashbord />} />
               <Route

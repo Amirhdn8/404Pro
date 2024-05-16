@@ -22,7 +22,7 @@ const Register = () => {
 
   return (
     <>
-      <div className="container text-center">
+      <di v className="container text-center">
         <h2 className="my-5">ایجاد حساب کاربری</h2>
         <div className="row d-flex justify-content-center align-items-center mt-5">
           <div className="col-md-6 col-sm-10 col-10 shadow-lg p-3 mb-5 bg-white rounded">
@@ -77,7 +77,7 @@ const Register = () => {
             />
           </div>
         </div>
-      </div>
+      </di>
     </>
   );
 };

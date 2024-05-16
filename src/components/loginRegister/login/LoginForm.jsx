@@ -68,9 +68,13 @@ const LoginForm = () => {
               name="password"
               className="text-danger mt-2"
             />
+            <Link to={"/auth/forgetPassword"} className="d-block mt-3">
+              فراموشی رمز عبور!
+            </Link>
             <Link to={"/auth/register"} className="d-block mt-3">
               آیا در سایت حساب کاربری ندارید؟
             </Link>
+
 
             <button className={`btn mt-4 ${Style.formBtn}`} type="submit">
               ورود
