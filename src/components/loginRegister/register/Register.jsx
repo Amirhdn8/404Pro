@@ -12,8 +12,6 @@ const Register = () => {
     verifyCode: "",
   });
 
-  // console.log(formData);
-
   const nextStep = () => {
     setCurrentStep(currentStep + 1);
   };
@@ -21,8 +19,6 @@ const Register = () => {
   const prevStep = () => {
     setCurrentStep(currentStep - 1);
   };
-
-  console.log(formData);
 
   return (
     <>

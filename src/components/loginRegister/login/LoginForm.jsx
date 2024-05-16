@@ -2,9 +2,12 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Style from "./login.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { loginUser } from "../../../services/api/authApi";
+import toast from "react-hot-toast";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const validation = (values) =>
     yup.object().shape({
       email: yup
@@ -16,11 +19,27 @@ const LoginForm = () => {
         .min(8, "رمز عبور کوتاه است")
         .required("پر کردن این بخش ضروریست"),
     });
+
+  const onSubmit = async (data) => {
+    try {
+      const res = await loginUser({
+        phoneOrGmail: data.email,
+        password: data.password,
+      });
+      if (res.success) {
+        navigate("/");
+        toast.success("ورود موفقیت آمیز بود!");
+      }
+    } catch (error) {
+      toast.error(error);
+    }
+  };
+
   return (
     <>
       <Formik
         initialValues={{ email: "", password: "" }}
-        onSubmit={(values) => console.log(values)}
+        onSubmit={onSubmit}
         validationSchema={validation}
       >
         <Form>
@@ -57,7 +76,13 @@ const LoginForm = () => {
               ورود
             </button>
             <button type="button" className={`btn mt-4 mx-2 ${Style.formBtn2}`}>
-            <Link className="text-decoration-none text-white" to={"/auth/register"}> ثبت نام</Link>
+              <Link
+                className="text-decoration-none text-white"
+                to={"/auth/register"}
+              >
+                {" "}
+                ثبت نام
+              </Link>
             </button>
           </div>
         </Form>

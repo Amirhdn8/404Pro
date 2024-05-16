@@ -12,7 +12,7 @@ const Step3 = ({ phoneNumber }) => {
 
   const validation = (values) =>
     yup.object().shape({
-      email: yup
+      gmail: yup
         .string()
         .email("درست وارد کنید!")
         .required("پر کردن این بخش ضروریست!"),
@@ -27,7 +27,7 @@ const Step3 = ({ phoneNumber }) => {
       // setIsPeinding(true);
       const res = await signUpUser({
         password,
-        gmail: data.email,
+        gmail,
         phoneNumber,
       });
       if (res.status) {
@@ -36,13 +36,13 @@ const Step3 = ({ phoneNumber }) => {
       }
     } catch (error) {
       toast.error(error);
-    } 
+    }
   };
 
   return (
     <>
       <Formik
-        initialValues={{ email: "", password: "" }}
+        initialValues={{ gmail: "", password: "" }}
         onSubmit={onSubmit}
         validationSchema={validation}
       >
@@ -51,13 +51,13 @@ const Step3 = ({ phoneNumber }) => {
             <div className="col-md-8 mb-4 text-end">
               <label className="d-block mb-3">ایمیل</label>
               <Field
-                name="email"
+                name="gmail"
                 className={`form-control ${Style.formInput}`}
                 placeholder="وارد کنید..."
               />
               <ErrorMessage
                 component={"p"}
-                name="email"
+                name="gmail"
                 className="text-danger mt-2"
               />
             </div>

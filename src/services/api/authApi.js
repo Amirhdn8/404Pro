@@ -33,3 +33,15 @@ export const signUpUser = async ({ password, gmail, phoneNumber }) => {
     throw new Error("مشخصات صحیح نیست");
   }
 };
+
+export const loginUser = async ({ phoneOrGmail, password }) => {
+  try {
+    const res = await http.post("/Sign/Login", {
+      phoneOrGmail,
+      password,
+    });
+    return res;
+  } catch (error) {
+    throw new Error("مشخصات صحیح نیست");
+  }
+};
