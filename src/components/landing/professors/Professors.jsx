@@ -1,41 +1,39 @@
-import React from "react";
-import ProfessorsCard from "./ProfessorsCard";
-import image1 from "../../../assets/ostad1.png";
-import image2 from "../../../assets/ostad2.png";
-import image3 from "../../../assets/ostad3.png";
+import React, { useEffect, useState } from "react";
 import ProfessorsList from "./ProfessorsList";
 import ProfessorsSlider from "./ProfessorsSlider";
+import { getAllTeachers } from "../../../services/api/profossorsApi";
 
 const Professors = () => {
-  const Data = [
-    {
-      id: 1,
-      image: image1,
-      title: "استاد بحر",
-      desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است",
-    },
-    {
-      id: 2,
-      image: image2,
-      title: "استاد مهدی",
-      desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است",
-    },
-    {
-      id: 3,
-      image: image3,
-      title: "استاد محسن",
-      desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است",
-    },
-  ];
+
+  const [professorsData, setProfessorsData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState();
+
+  const fetchProfessorsData = async () => {
+    try {
+      setIsLoading(true);
+      const res = await getAllTeachers();
+      setProfessorsData(res.data);
+    } catch (error) {
+      setError(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchProfessorsData();
+  }, []);
+
   return (
     <>
       <div className="container text-center">
         <h2>اساتید برتر</h2>
         <div className="row mt-5 d-flex justify-content-center align-items-center">
-          <ProfessorsList Data={Data} />
+          <ProfessorsList professorsData={professorsData} />
 
           <div className="col-12">
-            <ProfessorsSlider Data={Data} />
+            <ProfessorsSlider professorsData={professorsData} />
           </div>
         </div>
       </div>

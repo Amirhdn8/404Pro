@@ -1,20 +1,19 @@
 import React from "react";
 import ProfessorsCard from "./ProfessorsCard";
 
-const ProfessorsList = ({ Data }) => {
+const ProfessorsList = ({ professorsData }) => {
   return (
     <>
-      {Data.map((data) => {
+      {professorsData.map((data) => {
         return (
           <>
             <div
               className="col-md-3 col-sm-6 col-8 mt-5 d-none d-md-block d-sm-block"
-              key={data.id}
+              key={data.teacherId}
             >
               <ProfessorsCard
-                image={data.image}
-                title={data.title}
-                desc={data.desc}
+                image={data.pictureAddress}
+                title={data.fullName}
               />
             </div>
           </>

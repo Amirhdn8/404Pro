@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import "./App.css";
-
 import LandingPage from "./pages/LandingPage";
 import CourseMainPage from "./pages/CourseMainPage";
 import CourseDetailPage from "./pages/CourseDetailPage";
@@ -15,6 +14,7 @@ import EditProfilePage from "./pages/EditProfilePage";
 import MyCoursePanel from "./pages/MyCoursePanel";
 import Header from "./components/landing/header/Header";
 import Footer from "./components/landing/footer/Footer";
+
 function App() {
   const MainLayout = () => {
     return (

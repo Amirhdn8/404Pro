@@ -1,6 +1,7 @@
 .cardImg {
   height: 210px;
   margin-top: -110px;
+  border-radius: 50%;
 }
 
 .cardTxt{
