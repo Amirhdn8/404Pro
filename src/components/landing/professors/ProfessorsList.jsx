@@ -9,7 +9,6 @@ const ProfessorsList = ({ professorsData }) => {
           <>
             <div
               className="col-md-3 col-sm-6 col-8 mt-5 d-none d-md-block d-sm-block"
-              key={data.teacherId}
             >
               <ProfessorsCard
                 image={data.pictureAddress}

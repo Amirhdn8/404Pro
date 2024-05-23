@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 import ProfessorsCard from "./ProfessorsCard";
 
-const ProfessorsSlider = ({ Data }) => {
+const ProfessorsSlider = ({ professorsData }) => {
   return (
     <>
       <Swiper
@@ -18,7 +18,7 @@ const ProfessorsSlider = ({ Data }) => {
         modules={[EffectFlip, Pagination, Navigation]}
         className="mySwiper p-5"
       >
-        {Data?.map((data) => {
+        {professorsData?.map((data) => {
           return (
             <SwiperSlide
               key={data.id}
@@ -26,9 +26,8 @@ const ProfessorsSlider = ({ Data }) => {
             >
               <div className="col-8  m-auto">
                 <ProfessorsCard
-                  image={data.image}
-                  title={data.title}
-                  desc={data.desc}
+                  image={data.pictureAddress}
+                  title={data.fullName}
                 />
               </div>
             </SwiperSlide>
