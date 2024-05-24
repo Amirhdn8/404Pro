@@ -4,15 +4,10 @@ import Style from "./professorsCard.module.css";
 const ProfessorsCard = ({ title, image }) => {
   return (
     <>
-      <div className="card shadow border-0 p-3 mb-5 bg-white rounded">
-        <img
-          src={image}
-          className={`card-img-top p-5 ${Style.cardImg}`}
-          
-        />
-        <div className={`card-body ${Style.cardTxt}`}>
+      <div className="shadow  p-4 mb-3 bg-white" style={{borderRadius:"50%" , border:"3px dashed #6666FF"}}>
+        <img src={image} style={{height:"100px" , borderRadius:"50%"}} />
+        <div className="mt-4">
           <h6 style={{ fontWeight: "700" }}> {title} </h6>
-
         </div>
       </div>
     </>

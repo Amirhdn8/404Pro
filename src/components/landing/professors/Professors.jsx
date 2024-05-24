@@ -28,8 +28,8 @@ const Professors = () => {
   return (
     <>
       <div className="container text-center">
-        <h2>اساتید برتر</h2>
-        <div className="row mt-5 d-flex justify-content-center align-items-center">
+        <h2>اساتید </h2>
+        <div className="row mt-3 d-flex justify-content-center align-items-center">
           <ProfessorsList professorsData={professorsData} />
 
           <div className="col-12">
