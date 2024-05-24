@@ -29,14 +29,18 @@ const Course = () => {
       <h2>دوره ها</h2>
 
       <div className="row justify-content-center align-items-center mt-5">
-        {isLoading && <p>isLoading...!</p>}
+        {/* {isLoading && <p>isLoading...!</p>}
         {topCourse.map((data) => (
           <>
             <div className="col-md-3 col-sm-6 col-8">
               <CourseCard data={data} />
             </div>
           </>
-        ))}
+        ))} */}
+
+        <div className="col-md-3 col-sm-6 col-8">
+          <CourseCard />
+        </div>
 
         <div className="mt-4">
           <Link to="courseMain" className="text-decoration-none text-white">
