@@ -21,13 +21,9 @@ export const sendVerifyCode = async ({ phoneNumber, verifyCode }) => {
   }
 };
 
-export const signUpUser = async ({ password, gmail, phoneNumber }) => {
+export const signUpUser = async (data) => {
   try {
-    const res = await http.post("/Sign/Register", {
-      password,
-      gmail,
-      phoneNumber,
-    });
+    const res = await http.post("/Sign/Register", data);
     return res;
   } catch (error) {
     throw new Error("مشخصات صحیح نیست");
@@ -45,5 +41,3 @@ export const loginUser = async ({ phoneOrGmail, password }) => {
     throw new Error("مشخصات صحیح نیست");
   }
 };
-
-

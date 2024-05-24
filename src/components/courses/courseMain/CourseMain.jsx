@@ -193,7 +193,6 @@ const CourseMain = () => {
             })} */}
 
           {isLoading && <p>isLoading...!</p>}
-          {!courses.length && <p>no Data!!</p>}
           {courses.map((data) => (
             <p> {data.title} </p>
           ))}

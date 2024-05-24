@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Style from "./newsMain.module.css";
 import { IoSearch } from "react-icons/io5";
 import image1 from "../../../assets/news1.jpg";
@@ -8,6 +8,7 @@ import image4 from "../../../assets/news4.jpg";
 import image5 from "../../../assets/news5.jpg";
 import image6 from "../../../assets/news6.jpg";
 import NewsCard from "../../landing/news/NewsCard";
+import { getAllNews } from "../../../services/api/newsApi";
 
 const NewsMain = () => {
   const Data = [
@@ -84,6 +85,27 @@ const NewsMain = () => {
       desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
     },
   ];
+
+  const [news, setNews] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState();
+
+  const fetchNews = async () => {
+    try {
+      setIsLoading(true);
+      const res = await getAllNews();
+      setNews(res.data.news);
+    } catch (error) {
+      setError(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchNews();
+  }, []);
+
   return (
     <div className="container text-center">
       <h2 className="mt-5">همه اخبار و مقالات</h2>
@@ -108,7 +130,15 @@ const NewsMain = () => {
             </div>
           </div>
         </div>
-        {Data?.map((data) => {
+
+        {isLoading && <p>is Loading...!</p>}
+   
+        {news.map((data) => (
+            <p> {data.title} </p>
+        ))}
+
+
+        {/* {Data?.map((data) => {
           return (
             <>
               <div className="col-md-3 col-sm-6 col-8" key={data.id}>
@@ -120,7 +150,8 @@ const NewsMain = () => {
               </div>
             </>
           );
-        })}
+        })} */}
+        
       </div>
     </div>
   );

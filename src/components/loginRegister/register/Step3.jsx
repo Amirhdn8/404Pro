@@ -25,9 +25,10 @@ const Step3 = ({ phoneNumber }) => {
   const onSubmit = async (data) => {
     try {
       // setIsPeinding(true);
+      console.log(data)
       const res = await signUpUser({
-        password,
-        gmail,
+        password : data.password,
+        gmail : data.gmail,
         phoneNumber,
       });
       if (res.status) {
